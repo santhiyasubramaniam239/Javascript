@@ -190,7 +190,7 @@ function myCallback({ quantity }) {
 const result = Object.groupBy(fruits1, myCallback);
 console.log(result);*/
 
-/* String Methods*/
+/* String Methods
 let A = 'Welcome to my world';
 let b = A.slice(14, 19);
 console.log(b);
@@ -217,4 +217,32 @@ console.log(g.padEnd(10, "Sweet "));
 console.log(g.charAt(1));
 console.log(g.charCodeAt(1));
 let g1 = 'HTML-stands-for-HyperTextMarkupLanguage'
-console.log(g1.split('-'));
+console.log(g1.split('-'));*/
+/* Number methods
+let x = 345;
+console.log(x.toString());
+let y =55.5567;
+console.log(y.toExponential(0));
+console.log(y.toFixed(0));
+console.log(y.toPrecision(1));
+console.log(y.valueOf());*/
+const getData = async () => {
+    let y = await "Hello World";
+    console.log(y);
+}
+
+console.log(1);
+getData();
+console.log(2);
+async function fetchData() {
+  try {
+    let response = await fetch('https://api.example.com/data');
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+
+
