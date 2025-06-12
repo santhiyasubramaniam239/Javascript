@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse String Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .stage {
+      font-size: 2em;
+      margin: 30px 0;
+    }
+    .box {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+    .hidden {
+      opacity: 0;
+    }
+    .arrow {
+      font-size: 1.5em;
+      margin: 0 10px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reversing a String in JavaScript</h1>
+
+  <div class="stage" id="stage">Original String: "hello"</div>
+
+  <button onclick="startAnimation()">Start Animation</button>
+
+  <script>
+    const stage = document.getElementById("stage");
+    const original = "hello";
+    const steps = [
+      () => {
+        stage.innerHTML = `Original String: "<strong>${original}</strong>"`;
+      },
+      () => {
+        const chars = original.split("");
+        stage.innerHTML = 'Split into array:<br>' + chars.map(c => `<span class="box">${c}</span>`).join('');
+      },
+      () => {
+        const chars = original.split("").reverse();
+        stage.innerHTML = 'Reversed array:<br>' + chars.map(c => `<span class="box">${c}</span>`).join('');
+      },
+      () => {
+        const reversed = original.split("").reverse().join("");
+        stage.innerHTML = `Joined back into string:<br><strong>"${reversed}"</strong>`;
+      }
+    ];
+
+    let stepIndex = 0;
+    function startAnimation() {
+      stepIndex = 0;
+      runNextStep();
+    }
+
+    function runNextStep() {
+      if (stepIndex < steps.length) {
+        steps[stepIndex]();
+        stepIndex++;
+        setTimeout(runNextStep, 2000);
+      }
+    }
+  </script>
+
+</body>
+</html>

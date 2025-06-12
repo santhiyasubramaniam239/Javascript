@@ -1,8 +1,8 @@
-/* string reverse using built-in-methods */
+/* 1. string reverse using built-in-methods */
 const reversed = str => str.split('').reverse().join('');
 console.log(reversed('hello'));
 
-/* string reverse using iteration*/
+/* 2.string reverse using iteration*/
 function reverseString1(str) {
     let reversed = '';
     for (let i = str.length - 1; i >= 0; i--) {
@@ -11,7 +11,7 @@ function reverseString1(str) {
     return reversed;
 }
 console.log(reverseString1("World"));
-/* string reverse using array manipulation without .reverse()*/
+/* 3.string reverse using array manipulation without .reverse()*/
 function reverseString2(str) {
     let charArray = [];
 
@@ -42,16 +42,33 @@ function reverseString2(str) {
     return reversedStr;
 }
 console.log(reverseString2("Good Bye"));
-/* Reversing string using recursion*/
+/*OR*/
+let str = "hello , how are you";
+let charArray = [];
+let reversed9 = "";
+
+// Step 1: Push each character to array manually
+for (let i = 0; i < str.length; i++) {
+  charArray[charArray.length] = str[i]; // simulate array push
+}
+
+// Step 2: Read array backwards to build reversed string
+for (let j = charArray.length - 1; j >= 0; j--) {
+  reversed9 += charArray[j];
+}
+
+console.log(reversed9); 
+
+/*4. Reversing string using recursion*/
 function reverseString3(str) {
     if (str === '') return '';
     return reverseString3(str.substr(1)) + str[0];
 }
 console.log(reverseString3("Good Night"));
-/*ES6 Spread operator*/
+/*5.ES6 Spread operator*/
 const reverseString4 = str => [...str].reverse().join('');
 console.log(reverseString4("Good Morning"));
-/*Using while loop*/
+/*6.Using while loop*/
 function reverseString5(str) {
     let reversed = '';
     let i = str.length - 1;
@@ -62,7 +79,7 @@ function reverseString5(str) {
     return reversed;
 }
 console.log(reverseString5("Good Evening"));
-/*Using stack Array push and pop*/
+/*7.Using stack Array push and pop*/
 function reverseString6(str) {
     let stack = [];
     for (let char of str) {
@@ -77,7 +94,7 @@ function reverseString6(str) {
     return reversed;
 }
 console.log(reverseString6("Good Day"));
-/*Using Reduce*/
+/*8. Using Reduce*/
 const reverseString7 = str =>
     str.split('').reduce((reversed, char) => char + reversed, '');
 console.log(reverseString7("Evening Snack"));
