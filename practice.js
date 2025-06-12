@@ -246,5 +246,3 @@ async function fetchData() {
 
 
 
-
-
