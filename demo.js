@@ -340,6 +340,18 @@ function findUser(username){
   });
  /*console.log(promise); */
  promise.catch((reason)=>{console.log(reason)})
+ /*Anonymous function*/
+ const greet = function( str ) {
+	console.log("Welcome to ", str);
+};
+    
+greet("GeeksforGeeks!");
+/* Relational operators*/
+const obj = { length: 10 };
+console.log("length" in obj);
+console.log([] instanceof Array);
+console.log(typeof(obj));
+
    
 
  

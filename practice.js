@@ -226,7 +226,7 @@ console.log(y.toExponential(0));
 console.log(y.toFixed(0));
 console.log(y.toPrecision(1));
 console.log(y.valueOf());*/
-const getData = async () => {
+/*const getData = async () => {
     let y = await "Hello World";
     console.log(y);
 }
@@ -242,7 +242,9 @@ async function fetchData() {
   } catch (error) {
     console.error('Error fetching data:', error);
   }
-}
+}*/
+
+
 
 
 
