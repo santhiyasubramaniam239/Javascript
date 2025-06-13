@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Throttle Example</title>
+</head>
+<body style="height: 2000px;">
+  <h1>Scroll down to test throttle</h1>
+
+  <script>
+    function throttle(func, delay) {
+      let lastCall = 0;
+      return function (...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+          lastCall = now;
+          func.apply(this, args);
+        }
+      };
+    }
+
+    function handleScroll() {
+      console.log('Scroll event at', new Date().toISOString());
+    }
+
+    window.addEventListener('scroll', throttle(handleScroll, 1000));
+  </script>
+</body>
+</html>
