@@ -23,8 +23,7 @@ function display() {
     console.log(gesture);
 }
 display()
-gesture = "welcome";
-console.log(gesture);
+//console.log(gesture);shows error ReferenceError: gesture is not defined
 
 //problem:4
 
