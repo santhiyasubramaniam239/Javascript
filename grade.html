@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        
+        function tot() {
+            var a, b, c, d, e, sum;
+            a = parseInt(document.getElementById("s1").value);
+            b = parseInt(document.getElementById("s2").value);
+            c = parseInt(document.getElementById("s3").value);
+            d = parseInt(document.getElementById("s4").value);
+            e = parseInt(document.getElementById("s5").value);
+            sum = a + b + c + d + e;
+            document.getElementById("out").value = sum;
+        }
+        function credit1() {
+            var a1, b1, c1, d1, e1, sum1;
+            a1 = parseInt(document.getElementById("c1").value);
+            b1 = parseInt(document.getElementById("c2").value);
+            c1 = parseInt(document.getElementById("c3").value);
+            d1 = parseInt(document.getElementById("c4").value);
+            e1 = parseInt(document.getElementById("c5").value);
+            sum1 = a1 + b1 + c1 + d1 + e1;
+            document.getElementById("credit1").value = sum1;
+        }
+        function fun() {
+            alert("form submitted successfully");
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form onsubmit="fun()">
+            <table>
+                <tr>
+                    <td> Subject1<input type="number" id="s1" /></td><td> Credit<input type="number" id="c1" /></td>
+                </tr>
+                <tr>
+                    <td> Subject2<input type="number" id="s2" /></td><td> Credit<input type="number" id="c2" /></td>
+                </tr>
+                <tr>
+                    <td> Subject3<input type="number" id="s3" /></td><td> Credit<input type="number" id="c3" /></td>
+                </tr>
+                <tr>
+                    <td> Subject4<input type="number" id="s4" /></td><td> Credit<input type="number" id="c4" /></td>
+                </tr>
+                <tr>
+                    <td> Subject5<input type="number" id="s5" /></td><td> Credit<input type="number" id="c5" /></td>
+                </tr>
+
+                <tr>
+                    <td> <input type="button" value="Total marks" onclick="tot()" /> <input type="number" id="out" /></td>
+                </tr>
+                 <tr>
+                    <td> <input type="button" value="Total credits" onclick="credit1()"/> <input type="number" id="credit1" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <p id="demo"></p>
+    </center>
+</body>
+
+</html>
