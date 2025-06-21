@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            var s1, s2, s3, s4, s5, c1, c2, c3, c4, c5;
+            var credit, grade, g1, g2, g3, g4, g5, gpa1,gpa2, cgpa;
+            var s11, s12, s13, s14, s15, c11, c12, c13, c14, c15;
+            var credit1, grade1, g11, g12, g13, g14, g15;
+            s1 = parseInt(document.getElementById("sub1").value);
+            s2 = parseInt(document.getElementById("sub2").value);
+            s3 = parseInt(document.getElementById("sub3").value);
+            s4 = parseInt(document.getElementById("sub4").value);
+            s5 = parseInt(document.getElementById("sub5").value);
+            c1 = parseInt(document.getElementById("cr1").value);
+            c2 = parseInt(document.getElementById("cr2").value);
+            c3 = parseInt(document.getElementById("cr3").value);
+            c4 = parseInt(document.getElementById("cr4").value);
+            c5 = parseInt(document.getElementById("cr5").value);
+            g1 = c1 * (s1 / 10);
+            g2 = c2 * (s2 / 10);
+            g3 = c3 * (s3 / 10);
+            g4 = c4 * (s4 / 10);
+            g5 = c5 * (s5 / 10);
+            grade = g1 + g2 + g3 + g4 + g5;
+            credit = c1 + c2 + c3 + c4 + c5;
+            gpa1 = grade / credit;
+             s11 = parseInt(document.getElementById("subj1").value);
+            s12 = parseInt(document.getElementById("subj2").value);
+            s13 = parseInt(document.getElementById("subj3").value);
+            s14 = parseInt(document.getElementById("subj4").value);
+            s15 = parseInt(document.getElementById("subj5").value);
+            c11 = parseInt(document.getElementById("cre1").value);
+            c12 = parseInt(document.getElementById("cre2").value);
+            c13 = parseInt(document.getElementById("cre3").value);
+            c14 = parseInt(document.getElementById("cre4").value);
+            c15 = parseInt(document.getElementById("cre5").value);
+            g11 = c11 * (s11 / 10);
+            g12 = c12 * (s12 / 10);
+            g13 = c13 * (s13 / 10);
+            g14 = c14 * (s14 / 10);
+            g15 = c15 * (s15 / 10);
+            grade1 = g11 + g12 + g13 + g14 + g15;
+            credit1 = c11 + c12 + c13 + c14 + c15;
+            gpa2 = grade1 / credit1;
+            document.getElementById("out").value = gpa1;
+             document.getElementById("out1").value = gpa2;
+             cgpa = (gpa1+gpa2)/2;
+             document.getElementById("cgpa").value = cgpa;
+
+        } 
+    </script>
+</head>
+
+<body>
+  <center>
+        <form>
+            <fieldset>
+                <h2>Semester 1</h2>
+            Subject 1<input type="number" id="sub1" /><br><br>
+            credit<input type="number" id="cr1" /><br><br>
+            Subject 2<input type="number" id="sub2" /><br><br>
+            credit<input type="number" id="cr2" /><br><br>
+            Subject 3<input type="number" id="sub3" /><br><br>
+            credit<input type="number" id="cr3" /><br><br>
+            Subject 4<input type="number" id="sub4" /><br><br>
+            credit<input type="number" id="cr4" /><br><br>
+            Subject 5<input type="number" id="sub5" /><br><br>
+            credit<input type="number" id="cr5" /><br><br>
+            <input type="button" id="btn" value="GPA" onclick="fun()" /><br><br>
+            <input type="number" id="out" /><br><br>
+            </fieldset>
+             <fieldset>
+                <h2>Semester 2</h2>
+            Subject 1<input type="number" id="subj1" /><br><br>
+            credit<input type="number" id="cre1" /><br><br>
+            Subject 2<input type="number" id="subj2" /><br><br>
+            credit<input type="number" id="cre2" /><br><br>
+            Subject 3<input type="number" id="subj3" /><br><br>
+            credit<input type="number" id="cre3" /><br><br>
+            Subject 4<input type="number" id="subj4" /><br><br>
+            credit<input type="number" id="cre4" /><br><br>
+            Subject 5<input type="number" id="subj5" /><br><br>
+            credit<input type="number" id="cre5" /><br><br>
+            <input type="button" id="btn" value="GPA" onclick="fun()" /><br><br>
+            <input type="number" id="out1" /><br><br>
+            </fieldset>
+            <input type="button" id="btn" value="CGPA" onclick="fun()" /><br><br>
+            <input type="number" id="cgpa" /><br><br>
+           
+        </form>
+  </center>
+        <p id="demo"></p>
+   
+</body>
+
+</html>
